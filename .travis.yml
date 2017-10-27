@@ -1,9 +1,15 @@
 language: cpp
 compiler: gcc
-
 before_install:
 - sudo apt-get install zip
-
 script:
 - g++ main.cpp
 - ./a.out
+deploy:
+  provider: releases
+  api_key:
+    secure: Oslt9hu8DzmPAWIbDoQIYV9kZpse7gYWsiq6t1BiiqDeV/vLwyk4viztSqhQhpOkzG3IWQt0LG7Gi1W5XDBKFhcXlnNJvZDQ56pJJqR6Y5Z5pCKFq8bCf1Bnv/ml8xVzEwAVyNn6w1wsYHBnm7z/JUfjbjY4vehEvwHMrUhz6sXo81zHaGHpnPTk65xrbTkUfOzGa/uvg2FBqDYejOJdOGcdz0pYJ16sZRboKQiCKoKeM9Af3Xc54qqNiyUZzYnrVDOJCKjR4XkeNY0Wdh9/Ox1r4W2hpMvFEn318Dh6X24e1I03YmI+xy+rF/txV9mO4Q6EfiSb07brVlOEDNWjclfSJ1VAfQgLb4HJjK5+Q5OLyCqMmrLNihmkOKzPG6tHh7OcyaM7noAqa0TdTE1rCzMgOdQmA5vQYVzNvEqc6B9L5hZ9cZ9aPz8efahyZVMciUpOTVF6gPTnp5K9hrDjYFXn3EwS3vi62XNoMwneMtatsZHcRcGO2c5jjVaeKA2AKgB4Q86eq5D5eYYgB+uAk/xWTxWxYUhIZ1Q+hvpKf2XCYFJmTNOMJlJoXW4EWo/OOfcQLNkuw0QztC/SBbD53+wKd5ODOPAnf+mUu/lDmxyloXnXRbUifjVNcDtDozBdpOvaaGSv53dMJZs6kCCWNp3CVgjpRvRvX1mhd9AzQik=
+  file: a.out
+  on:
+    repo: VolodymyrAhafonov/TT
+    skip_cleanup: true
