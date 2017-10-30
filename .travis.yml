@@ -7,6 +7,7 @@ script:
 - ./a.out
 - ls -l
 - ldd a.out
+- echo Hello
 deploy:
   provider: releases
   api_key:
