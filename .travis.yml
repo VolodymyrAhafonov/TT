@@ -6,7 +6,6 @@ script:
 - g++ main.cpp
 - ./a.out
 - ls -l
-before deploy:
 - ldd a.out
 deploy:
   provider: releases
@@ -16,4 +15,5 @@ deploy:
   skip_cleanup: true
   on:
     repo: VolodymyrAhafonov/TT
+    tags: true
     
